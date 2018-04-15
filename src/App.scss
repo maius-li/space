@@ -23,6 +23,7 @@
   .moon-wrap {
     @include size(400px);
     @include circle(#6A99CB);
+    animation: shine 1s infinite;
     filter: blur(35px);
   }
   .moon {
@@ -38,13 +39,22 @@
       @include size(60px);
     }
     &:nth-child(2){
-      @include ab_center(30%, 60%);
+      @include ab_center(30%, 55%);
       @include size(30px);
     }
     &:nth-child(3){
-      @include ab_center(65%, 60%);
+      @include ab_center(60%, 58%);
       @include size(50px);
     }
+  }
+}
+
+@keyframes shine {
+  0% {
+    border: 1px solid #FFEB3B;
+  }
+  100% {
+    border: 7px solid #FFEB3B;
   }
 }
 
@@ -55,10 +65,4 @@
 
 
 
-
-
-// @keyframes App-logo-spin {
-//   from { transform: rotate(0deg); }
-//   to { transform: rotate(360deg); }
-// }
 
